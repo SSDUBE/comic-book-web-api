@@ -1,0 +1,16 @@
+<div>
+  <h1>Comic Details</h1>
+
+  <strong>Title:</strong>  {{comic.title}} <br>
+  <strong>Format:</strong>  {{comic.format}}<br><br>
+
+  <div class="details" *ngIf="creators.length > 0">
+    <h2>Creators</h2>
+    <p *ngFor="let creator of creators">
+      {{creator.name}} ({{creator.role}})
+    </p>
+  </div>
+
+</div>
+
+<a routerLink="/">Comics Page</a>

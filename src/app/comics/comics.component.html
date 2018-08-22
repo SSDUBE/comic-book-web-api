@@ -1,0 +1,6 @@
+<h1>Comics</h1>
+<input type="text" name="search" [(ngModel)]="filter" (keyup)="search()" placeholder="Search">
+<h1 *ngIf="filter.length > 0 && comics.length == 0">No comics found</h1>
+<div *ngFor="let comic of comics">
+  <h3><a routerLink="/comic/{{comic.id}}">{{comic.title}}</a></h3>
+</div>
